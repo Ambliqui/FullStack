@@ -1,0 +1,7 @@
+com\arelance\commandcalculadora\command\Calculadora.class
+com\arelance\commandcalculadora\Principal.class
+com\arelance\commandcalculadora\command\Command.class
+com\arelance\commandcalculadora\command\MultiplicaCommand.class
+com\arelance\commandcalculadora\command\SumaCommand.class
+com\arelance\commandcalculadora\command\DivideCommand.class
+com\arelance\commandcalculadora\command\RestaCommand.class

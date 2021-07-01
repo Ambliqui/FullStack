@@ -1,0 +1,6 @@
+com\arelance\ejemplocommand\EncenderCommand.class
+com\arelance\ejemplocommand\Switch.class
+com\arelance\ejemplocommand\Command.class
+com\arelance\ejemplocommand\Main.class
+com\arelance\ejemplocommand\ApagarCommand.class
+com\arelance\ejemplocommand\ObjetoDomotico.class

@@ -1,0 +1,43 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'C:/Users/Ambliqui/Documents/NetBeansProjects/ConcesionarioSergio/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Ambliqui/Documents/NetBeansProjects/ConcesionarioSergio/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ConcesionarioSergio 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/Ambliqui/Documents/NetBeansProjects/ConcesionarioSergio/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'ConcesionarioSergio 1.0-SNAPSHOT API'
+Prueba
+'C:/Users/Ambliqui/Documents/NetBeansProjects/ConcesionarioSergio/src/main/java/Prueba/Coche.java'
+'C:/Users/Ambliqui/Documents/NetBeansProjects/ConcesionarioSergio/src/main/java/Prueba/Persona.java'
+'C:/Users/Ambliqui/Documents/NetBeansProjects/ConcesionarioSergio/src/main/java/Prueba/PersonaDomicilio.java'
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\src\main\java = 1624348548000
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\allclasses-frame.html = 1624445246687
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\allclasses-noframe.html = 1624445246692
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\constant-values.html = 1624445246567
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\deprecated-list.html = 1624445246681
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\help-doc.html = 1624445246702
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\index-all.html = 1624445246672
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\index.html = 1624445246696
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\overview-tree.html = 1624445246646
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\package-list = 1624445246526
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\script.js = 1624445246707
+C:\Users\Ambliqui\Documents\NetBeansProjects\ConcesionarioSergio\target\site\apidocs\stylesheet.css = 1624445246705
