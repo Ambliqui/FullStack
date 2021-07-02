@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  *
  * @author Mefisto
  */
-public class AccionAlta extends Accion {
+public class AccionAlta implements Accion {
 
     private Usuario usuario;
 
@@ -31,27 +31,7 @@ public class AccionAlta extends Accion {
     }
     
     @Override
-    public void ejecutar() {
-        FileOutputStream fileOut = null;
-        FileInputStream fileIn = null;
-        try {
-            System.out.println("Doy el alta");
-            fileOut = new FileOutputStream("biblioteca.bin");
-            ObjectOutputStream oos = new ObjectOutputStream(fileOut);    
-            FileInputStream fis = new FileInputStream("biblioteca.bin");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            fileIn = new FileInputStream("biblioteca.bin");
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(AccionAlta.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(AccionAlta.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            try {
-                fileOut.close();
-                fileIn.close();
-            } catch (IOException ex) {
-                Logger.getLogger(AccionAlta.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+    public void ejecutar(){
+        System.out.println("Alta de usuario");
     }
 }

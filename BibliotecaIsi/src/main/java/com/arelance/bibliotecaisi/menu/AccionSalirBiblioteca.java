@@ -9,7 +9,7 @@ package com.arelance.bibliotecaisi.menu;
  *
  * @author Mefisto
  */
-public class AccionSalirBiblioteca extends Accion{
+public class AccionSalirBiblioteca implements Accion{
     
     @Override
     public void ejecutar(){

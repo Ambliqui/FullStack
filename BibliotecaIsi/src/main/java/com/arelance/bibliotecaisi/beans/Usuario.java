@@ -13,27 +13,35 @@ import java.util.Objects;
  * @author Ambliqui
  */
 public class Usuario implements Serializable{
-
+    
     private static final long serialVersionUID = 1L;
-    private String nombre;
-    private String apellido;
-    private String DNI;
-    private String password;
+    Credenciales credenciales;
+    DatosPersonales datosPersonales;
 
-    public Usuario() {
+    public Usuario(Credenciales credenciales, DatosPersonales datosPersonales) {
+        this.credenciales = credenciales;
+        this.datosPersonales = datosPersonales;
     }
 
-    public Usuario(String nombre, String apellido, String DNI, String password) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.DNI = DNI;
-        this.password = password;
+    public Credenciales getCredenciales() {
+        return credenciales;
+    }
+
+    public void setCredenciales(Credenciales credenciales) {
+        this.credenciales = credenciales;
+    }
+
+    public DatosPersonales getDatosPersonales() {
+        return datosPersonales;
+    }
+
+    public void setDatosPersonales(DatosPersonales datosPersonales) {
+        this.datosPersonales = datosPersonales;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 59 * hash + Objects.hashCode(this.DNI);
+        int hash = 7;
         return hash;
     }
 
@@ -49,47 +57,17 @@ public class Usuario implements Serializable{
             return false;
         }
         final Usuario other = (Usuario) obj;
-        if (!Objects.equals(this.DNI, other.DNI)) {
+        if (!Objects.equals(this.credenciales, other.credenciales)) {
+            return false;
+        }
+        if (!Objects.equals(this.datosPersonales, other.datosPersonales)) {
             return false;
         }
         return true;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public String getDNI() {
-        return DNI;
-    }
-
-    public void setDNI(String DNI) {
-        this.DNI = DNI;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    //quitar password despues de las pruebas
     @Override
     public String toString() {
-        return "Usuario{" + "nombre=" + nombre + ", apellido=" + apellido + ", DNI=" + DNI + ", password=" + password + '}';
+        return "Usuario{" + "credenciales=" + credenciales + ", datosPersonales=" + datosPersonales + '}';
     }
 }

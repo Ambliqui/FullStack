@@ -8,7 +8,10 @@ package com.arelance.bibliotecaisi;
 import com.arelance.bibliotecaisi.menu.*;
 import com.arelance.bibliotecaisi.menu.vista.Vista;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -18,15 +21,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Opcion> opciones = new ArrayList<>();
-
+//        List<Opcion> opciones = new ArrayList<>();
+        Set<Opcion> opciones = new LinkedHashSet<Opcion>();
+        
         opciones.add(new Opcion(1, "Login", new AccionLogin()));
         opciones.add(new Opcion(2, "Alta", new AccionAlta()));
         opciones.add(new Opcion(3, "Salir", new AccionSalirBiblioteca()));
 
         Menu menuPrincipal = new Menu(opciones);
+        Vista vista = new Vista();
         
-        menuPrincipal.imprimirMenu();
+        vista.imprimirMenu(opciones);
         menuPrincipal.elegirOpcion();
     }
 }

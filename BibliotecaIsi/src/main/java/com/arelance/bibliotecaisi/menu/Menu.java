@@ -5,36 +5,36 @@
  */
 package com.arelance.bibliotecaisi.menu;
 
-import java.util.List;
+import java.io.Serializable;
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  *
  * @author Mefisto
  */
-public class Menu {
+public class Menu implements Serializable{
 
-    private List<Opcion> opciones;
+    private Set<Opcion> opciones;
 
-    public Menu(List<Opcion> opciones) {
+    public Menu(Set<Opcion> opciones) {
         this.opciones = opciones;
-    }
-
-    public void imprimirMenu() {
-        opciones.forEach(opcion -> {
-            System.out.println(opciones.indexOf(opcion) +" numeral: "+ opcion.getItem() + ".-" + opcion.getLabel());
-        });
     }
     
     public int elegirOpcion(){
         int opcion = -1;
         opcion = new Scanner(System.in).nextInt();
-        opciones.get(opcion-1).getAccion().ejecutar();
+        for (Iterator<Opcion> iterator = opciones.iterator(); iterator.hasNext();) {
+            if(iterator.next().getItem()== opcion-1){
+                iterator.next().getAccion().ejecutar();
+            }
+        }
+//        opciones.iterator().next().getAccion().ejecutar(); //.get(opcion-1).getAccion().ejecutar();
         return opcion;
     }
     
-    public List<Opcion> getOpciones() {
+    public Set<Opcion> getOpciones() {
         return opciones;
     }
-
 }

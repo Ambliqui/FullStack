@@ -5,6 +5,8 @@
  */
 package com.arelance.bibliotecaisi.menu;
 
+import java.util.Objects;
+
 /**
  *
  * @author Mefisto
@@ -19,6 +21,37 @@ public class Opcion {
         this.label = label;
         this.accion = accion;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 67 * hash + this.item;
+        hash = 67 * hash + Objects.hashCode(this.accion);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Opcion other = (Opcion) obj;
+        if (this.item != other.item) {
+            return false;
+        }
+        if (!Objects.equals(this.accion, other.accion)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 
     public int getItem() {
         return item;
