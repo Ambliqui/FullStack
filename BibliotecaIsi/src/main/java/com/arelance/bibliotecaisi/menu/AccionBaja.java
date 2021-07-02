@@ -12,14 +12,8 @@ import com.arelance.bibliotecaisi.beans.Usuario;
  * @author Mefisto
  */
 public class AccionBaja implements Accion {
-    
-    private Usuario usuario;
 
     public AccionBaja() {
-    }
-
-    public AccionBaja(Usuario usuario) {
-        this.usuario = usuario;
     }
     
     @Override

@@ -29,6 +29,7 @@ public class Main {
         opciones.add(new Opcion(3, "Salir", new AccionSalirBiblioteca()));
 
         Menu menuPrincipal = new Menu(opciones);
+        
         Vista vista = new Vista();
         
         vista.imprimirMenu(opciones);
