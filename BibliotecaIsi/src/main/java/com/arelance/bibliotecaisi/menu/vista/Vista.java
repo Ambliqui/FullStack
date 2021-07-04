@@ -9,8 +9,11 @@ import com.arelance.bibliotecaisi.beans.*;
 import com.arelance.bibliotecaisi.menu.Menu;
 import com.arelance.bibliotecaisi.menu.Opcion;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
+import java.util.ResourceBundle;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  *
@@ -19,8 +22,9 @@ import java.util.Scanner;
 public class Vista {
 
 //    Locale locale = Locale.getDefault();
-//    Locale locale = Locale.US;
-//    ResourceBundle msg = ResourceBundle.getBundle("com/arelance/Bundle", locale);
+    Locale locale = Locale.US;
+    ResourceBundle msg = ResourceBundle.getBundle("Bundle", locale);
+
     public Usuario recogerUsuario() {
 
         String nombre;
@@ -28,13 +32,13 @@ public class Vista {
         String nick;
         String password;
 
-        System.out.println("socio.nombre");
+        System.out.println(msg.getString("socio.nombre"));
         nombre = new Scanner(System.in).nextLine();
-        System.out.println("socio.apellido ");
+        System.out.println(msg.getString("socio.apellido"));
         apellido = new Scanner(System.in).nextLine();
-        System.out.println("socio.nick");
+        System.out.println(msg.getString("socio.nick"));
         nick = new Scanner(System.in).nextLine();
-        System.out.println("socio.password");
+        System.out.println(msg.getString("socio.password"));
         password = new Scanner(System.in).nextLine();
 
         Usuario usuario = new Usuario(new Credenciales(nick, password), new DatosPersonales(nombre, apellido));
@@ -46,9 +50,9 @@ public class Vista {
         String titulo;
         String ISBN;
 
-        System.out.println("libro.titulo");
+        System.out.println(msg.getString("libro.titulo"));
         titulo = new Scanner(System.in).nextLine();
-        System.out.println("libro.ISBN");
+        System.out.println(msg.getString("libro.ISBN"));
         ISBN = new Scanner(System.in).nextLine();
         Libro libro = new Libro(titulo, ISBN);
         return libro;
@@ -56,9 +60,18 @@ public class Vista {
 
     public void imprimirMenu(Menu menu) {
 
-        for (Integer clave : menu.getOpciones().keySet()) {
+        menu.getOpciones().keySet().forEach(clave -> {
             System.out.println(clave + ".- " + menu.getOpciones().get(clave).getLabel());
-        }
+        });
+    }
+
+    public void imprimirLibro(Set<Libro> libreria) {
+        System.out.println("Estos son nuestros ejemplares:");
+        Iterator iterador = libreria.iterator();
+        libreria.forEach(next -> {
+            System.out.println("\nISBN: " + next.getISBN());
+            System.out.println("Libro: " + next.getTitulo());
+        });
     }
 
     public void elegirOpcion(Menu menu) {
@@ -66,5 +79,11 @@ public class Vista {
         int opcion = -1;
         opcion = new Scanner(System.in).nextInt();
         opciones.get(opcion).getAccion().ejecutar();
+    }
+    
+    public static void main(String[] args) {
+        
+        Vista vista = new Vista();
+        vista.recogerUsuario();
     }
 }

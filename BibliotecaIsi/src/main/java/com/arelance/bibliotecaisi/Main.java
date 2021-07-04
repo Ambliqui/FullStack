@@ -24,7 +24,7 @@ public class Main {
         opciones.put(1, new Opcion("Login", new AccionLogin()));
         opciones.put(2, new Opcion("Alta", new AccionAlta()));
         opciones.put(3, new Opcion("Salir", new AccionSalirBiblioteca()));
-        
+        opciones.put(4, new Opcion("Alta Libro", new AccionAltaLibro()));
         Menu menuPrincipal = new Menu(opciones);
 
         vista.imprimirMenu(menuPrincipal);

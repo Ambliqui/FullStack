@@ -12,9 +12,9 @@ import java.util.Objects;
  *
  * @author Ambliqui
  */
-public class Libro implements Serializable{
+public class Libro{ //implements Serializable{
 
-    private static final long serialVersionUID = 1L;
+//    private static final long serialVersionUID = 1L;
     private String titulo;
     private String ISBN;
 
