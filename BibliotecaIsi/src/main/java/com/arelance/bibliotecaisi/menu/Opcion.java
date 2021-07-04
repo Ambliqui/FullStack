@@ -12,12 +12,11 @@ import java.util.Objects;
  * @author Mefisto
  */
 public class Opcion {
-    private int item;
+    
     private String label;
-    private Accion accion;
+    private AccionUsuario accion;
 
-    public Opcion(int item, String label, Accion accion) {
-        this.item = item;
+    public Opcion(String label, AccionUsuario accion) {
         this.label = label;
         this.accion = accion;
     }
@@ -25,8 +24,8 @@ public class Opcion {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 67 * hash + this.item;
-        hash = 67 * hash + Objects.hashCode(this.accion);
+        hash = 31 * hash + Objects.hashCode(this.label);
+        hash = 31 * hash + Objects.hashCode(this.accion);
         return hash;
     }
 
@@ -42,7 +41,7 @@ public class Opcion {
             return false;
         }
         final Opcion other = (Opcion) obj;
-        if (this.item != other.item) {
+        if (!Objects.equals(this.label, other.label)) {
             return false;
         }
         if (!Objects.equals(this.accion, other.accion)) {
@@ -50,18 +49,12 @@ public class Opcion {
         }
         return true;
     }
-    
-    
-
-    public int getItem() {
-        return item;
-    }
 
     public String getLabel() {
         return label;
     }
 
-    public Accion getAccion() {
+    public AccionUsuario getAccion() {
         return accion;
     }
 }

@@ -6,35 +6,22 @@
 package com.arelance.bibliotecaisi.menu;
 
 import java.io.Serializable;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.Map;
 
 /**
  *
  * @author Mefisto
  */
-public class Menu implements Serializable{
+public class Menu implements Serializable {
+    
+    private static final long serialVersionUID = 1L;
+    Map<Integer, Opcion> opciones;
 
-    private Set<Opcion> opciones;
-
-    public Menu(Set<Opcion> opciones) {
+    public Menu(Map<Integer, Opcion> opciones) {
         this.opciones = opciones;
     }
-    
-    public int elegirOpcion(){
-        int opcion = -1;
-        opcion = new Scanner(System.in).nextInt();
-        for (Iterator<Opcion> iterator = opciones.iterator(); iterator.hasNext();) {
-            if(iterator.next().getItem()== opcion-1){
-                iterator.next().getAccion().ejecutar();
-            }
-        }
-//        opciones.iterator().next().getAccion().ejecutar(); //.get(opcion-1).getAccion().ejecutar();
-        return opcion;
-    }
-    
-    public Set<Opcion> getOpciones() {
+
+    public Map<Integer, Opcion> getOpciones() {
         return opciones;
     }
 }

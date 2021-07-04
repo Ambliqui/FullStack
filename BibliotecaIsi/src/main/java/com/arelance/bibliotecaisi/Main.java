@@ -7,11 +7,8 @@ package com.arelance.bibliotecaisi;
 
 import com.arelance.bibliotecaisi.menu.*;
 import com.arelance.bibliotecaisi.menu.vista.Vista;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  *
@@ -20,19 +17,17 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
-
-//        List<Opcion> opciones = new ArrayList<>();
-        Set<Opcion> opciones = new LinkedHashSet<Opcion>();
         
-        opciones.add(new Opcion(1, "Login", new AccionLogin()));
-        opciones.add(new Opcion(2, "Alta", new AccionAlta()));
-        opciones.add(new Opcion(3, "Salir", new AccionSalirBiblioteca()));
-
-        Menu menuPrincipal = new Menu(opciones);
-        
+        Map <Integer, Opcion> opciones = new LinkedHashMap<>();
         Vista vista = new Vista();
         
-        vista.imprimirMenu(opciones);
-        menuPrincipal.elegirOpcion();
+        opciones.put(1, new Opcion("Login", new AccionLogin()));
+        opciones.put(2, new Opcion("Alta", new AccionAlta()));
+        opciones.put(3, new Opcion("Salir", new AccionSalirBiblioteca()));
+        
+        Menu menuPrincipal = new Menu(opciones);
+
+        vista.imprimirMenu(menuPrincipal);
+        vista.elegirOpcion(menuPrincipal);
     }
 }

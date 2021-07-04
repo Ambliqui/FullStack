@@ -5,13 +5,11 @@
  */
 package com.arelance.bibliotecaisi.menu;
 
-import com.arelance.bibliotecaisi.beans.Usuario;
-
 /**
  *
  * @author Mefisto
  */
-public class AccionBaja implements Accion {
+public class AccionBaja implements AccionUsuario {
 
     public AccionBaja() {
     }

@@ -11,7 +11,7 @@ import com.arelance.bibliotecaisi.beans.Usuario;
  *
  * @author Mefisto
  */
-public class AccionAlta implements Accion {
+public class AccionAlta implements AccionUsuario {
 
     private Usuario usuario;
 

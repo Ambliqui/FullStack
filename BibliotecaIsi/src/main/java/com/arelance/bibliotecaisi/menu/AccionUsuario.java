@@ -9,7 +9,7 @@ package com.arelance.bibliotecaisi.menu;
  *
  * @author Mefisto
  */
-public interface Accion {
+public interface AccionUsuario {
 
     public void ejecutar();
 }
