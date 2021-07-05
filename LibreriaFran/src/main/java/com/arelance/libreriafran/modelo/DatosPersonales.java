@@ -3,26 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pryetsa.bibliotecav2.beans;
+package com.arelance.libreriafran.modelo;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
- * @author pryet
+ * @author Admin
  */
-public class Usuario implements Serializable{
+public class DatosPersonales implements Serializable{
     private static final long serialVersionUID = 1L;
     private String nombre;
-    private String apellidos;
+    private String apellido;
 
-    public Usuario() {
-    } 
-    
-    public Usuario(String nombre, String apellidos) {
+    public DatosPersonales(String nombre, String apellido) {
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.apellido = apellido;
+    }
+
+    public DatosPersonales() {
     }
 
     public String getNombre() {
@@ -33,17 +33,19 @@ public class Usuario implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
+        int hash = 3;
+        hash = 17 * hash + Objects.hashCode(this.nombre);
+        hash = 17 * hash + Objects.hashCode(this.apellido);
         return hash;
     }
 
@@ -58,17 +60,18 @@ public class Usuario implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Usuario other = (Usuario) obj;
+        final DatosPersonales other = (DatosPersonales) obj;
         if (!Objects.equals(this.nombre, other.nombre)) {
             return false;
         }
-        return Objects.equals(this.apellidos, other.apellidos);
+        return Objects.equals(this.apellido, other.apellido);
     }
 
     @Override
     public String toString() {
-        return "\nUsuario{" + "nombre=" + nombre + ", apellidos=" + apellidos + '}';
+        return "DatosPersonales{" + "nombre=" + nombre + ", apellido=" + apellido + '}';
     }
+    
     
     
 }

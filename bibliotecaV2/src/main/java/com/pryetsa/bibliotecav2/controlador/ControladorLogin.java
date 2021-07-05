@@ -5,11 +5,11 @@
  */
 package com.pryetsa.bibliotecav2.controlador;
 
-import com.pryetsa.bibliotecav2.beans.*;
+import com.arelance.bibliotecaisi.vista.*;
+import com.arelance.bibliotecaisi.beans.*;
 import com.pryetsa.bibliotecav2.excepciones.*;
 import com.pryetsa.bibliotecav2.logica.*;
 import com.pryetsa.bibliotecav2.servicios.*;
-import com.pryetsa.bibliotecav2.vista.*;
 
 /**
  *

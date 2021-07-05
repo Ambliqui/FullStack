@@ -3,37 +3,49 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pryetsa.bibliotecav2.beans;
+package com.arelance.libreriafran.modelo;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
- * @author pryet
+ * @author Admin
  */
-public class DatosLogin implements Comparable<DatosLogin>, Serializable{
+public class Credenciales implements Comparable<Credenciales>, Serializable{
     private static final long serialVersionUID = 1L;
-     private final String password;
-     private final String nick;
+    private String nick;
+    private String pw;
 
-    public DatosLogin(String password, String nick) {
-        this.password = password;
+    public Credenciales(String nick, String pw) {
         this.nick = nick;
+        this.pw = pw;
     }
 
-    public String getPassword() {
-        return password;
+    public Credenciales() {
     }
 
     public String getNick() {
         return nick;
     }
 
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
+
+    public String getPw() {
+        return pw;
+    }
+
+    public void setPw(String pw) {
+        this.pw = pw;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 7;//Permite pass repetidos
-        hash = 59 * hash + Objects.hashCode(this.nick);
+        int hash = 7;
+        hash = 83 * hash + Objects.hashCode(this.nick);
+        hash = 83 * hash + Objects.hashCode(this.pw);
         return hash;
     }
 
@@ -48,16 +60,23 @@ public class DatosLogin implements Comparable<DatosLogin>, Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final DatosLogin other = (DatosLogin) obj;
+        final Credenciales other = (Credenciales) obj;
         if (!Objects.equals(this.nick, other.nick)) {
             return false;
         }
-        return true;
+        return Objects.equals(this.pw, other.pw);
+    }
+    
+
+    @Override
+    public String toString() {
+        return "Credenciales{" + "nick=" + nick + ", pw=" + pw + '}';
     }
 
     @Override
-    public int compareTo(DatosLogin o) {
+    public int compareTo(Credenciales o) {
         return nick.compareTo(o.nick);
     }
+    
     
 }

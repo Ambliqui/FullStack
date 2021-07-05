@@ -5,13 +5,15 @@
  */
 package com.pryetsa.bibliotecav2;
 
-import com.pryetsa.bibliotecav2.beans.*;
+import com.arelance.bibliotecaisi.vista.VistaAntonio;
+import com.arelance.bibliotecaisi.beans.DatosLogin;
+import com.arelance.bibliotecaisi.beans.Usuario;
+import com.arelance.bibliotecaisi.beans.Libro;
 import com.pryetsa.bibliotecav2.controlador.*;
 import com.pryetsa.bibliotecav2.datosFichero.*;
 import com.pryetsa.bibliotecav2.excepciones.*;
 import com.pryetsa.bibliotecav2.logica.Logica;
 import com.pryetsa.bibliotecav2.servicios.*;
-import com.pryetsa.bibliotecav2.vista.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;

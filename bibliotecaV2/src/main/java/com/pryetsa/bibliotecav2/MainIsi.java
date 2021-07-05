@@ -6,7 +6,7 @@
 package com.pryetsa.bibliotecav2;
 
 import com.arelance.bibliotecaisi.menu.*;
-import com.pryetsa.bibliotecav2.vista.Vista;
+import com.arelance.bibliotecaisi.vista.Vista;
 import java.util.LinkedHashMap;
 import java.util.Map;
 

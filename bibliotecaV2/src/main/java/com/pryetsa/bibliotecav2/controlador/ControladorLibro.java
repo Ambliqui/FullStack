@@ -5,13 +5,13 @@
  */
 package com.pryetsa.bibliotecav2.controlador;
 
-import com.pryetsa.bibliotecav2.beans.Libro;
-import com.pryetsa.bibliotecav2.beans.Sesion;
+import com.arelance.bibliotecaisi.beans.Libro;
+import com.arelance.bibliotecaisi.beans.Sesion;
 import com.pryetsa.bibliotecav2.datosFichero.PersistenciaLibro;
 import com.pryetsa.bibliotecav2.logica.Logica;
 import com.pryetsa.bibliotecav2.servicios.ServiciosLibro;
 import com.pryetsa.bibliotecav2.servicios.ServiciosSesion;
-import com.pryetsa.bibliotecav2.vista.VistaAntonio;
+import com.arelance.bibliotecaisi.vista.VistaAntonio;
 
 /**
  *

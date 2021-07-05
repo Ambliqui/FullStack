@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pryetsa.bibliotecav2.beans;
+package com.arelance.bibliotecaisi.beans;
 
 import java.util.HashSet;
 import java.util.Set;

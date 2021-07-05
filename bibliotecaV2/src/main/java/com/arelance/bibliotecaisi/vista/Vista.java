@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pryetsa.bibliotecav2.vista;
+package com.arelance.bibliotecaisi.vista;
 
 import com.arelance.bibliotecaisi.menu.Menu;
 import com.arelance.bibliotecaisi.menu.Opcion;
-import com.pryetsa.bibliotecav2.beans.DatosLogin;
-import com.pryetsa.bibliotecav2.beans.Libro;
-import com.pryetsa.bibliotecav2.beans.Usuario;
+import com.arelance.bibliotecaisi.beans.DatosLogin;
+import com.arelance.bibliotecaisi.beans.Libro;
+import com.arelance.bibliotecaisi.beans.Usuario;
 import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;

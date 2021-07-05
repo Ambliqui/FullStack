@@ -5,8 +5,8 @@
  */
 package com.arelance.bibliotecaisi.menu;
 
-import com.pryetsa.bibliotecav2.beans.Libro;
-import com.pryetsa.bibliotecav2.vista.Vista;
+import com.arelance.bibliotecaisi.beans.Libro;
+import com.arelance.bibliotecaisi.vista.Vista;
 import java.util.LinkedHashSet;
 import java.util.Set;
 

@@ -5,9 +5,9 @@
  */
 package com.pryetsa.bibliotecav2.servicios;
 
-import com.pryetsa.bibliotecav2.beans.Libro;
-import com.pryetsa.bibliotecav2.beans.Sesion;
-import com.pryetsa.bibliotecav2.beans.Usuario;
+import com.arelance.bibliotecaisi.beans.Libro;
+import com.arelance.bibliotecaisi.beans.Sesion;
+import com.arelance.bibliotecaisi.beans.Usuario;
 import com.pryetsa.bibliotecav2.datosFichero.CommandFile;
 import com.pryetsa.bibliotecav2.datosFichero.Escribir;
 import com.pryetsa.bibliotecav2.datosFichero.Leer;

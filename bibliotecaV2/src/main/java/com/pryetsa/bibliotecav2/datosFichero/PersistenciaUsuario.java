@@ -5,8 +5,8 @@
  */
 package com.pryetsa.bibliotecav2.datosFichero;
 
-import com.pryetsa.bibliotecav2.beans.DatosLogin;
-import com.pryetsa.bibliotecav2.beans.Usuario;
+import com.arelance.bibliotecaisi.beans.DatosLogin;
+import com.arelance.bibliotecaisi.beans.Usuario;
 import java.io.Serializable;
 import java.util.Map;
 

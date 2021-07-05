@@ -5,10 +5,10 @@
  */
 package com.pryetsa.bibliotecav2.logica;
 
-import com.pryetsa.bibliotecav2.beans.DatosLogin;
-import com.pryetsa.bibliotecav2.beans.Libro;
-import com.pryetsa.bibliotecav2.beans.Sesion;
-import com.pryetsa.bibliotecav2.beans.Usuario;
+import com.arelance.bibliotecaisi.beans.DatosLogin;
+import com.arelance.bibliotecaisi.beans.Libro;
+import com.arelance.bibliotecaisi.beans.Sesion;
+import com.arelance.bibliotecaisi.beans.Usuario;
 import com.pryetsa.bibliotecav2.datosFichero.PersistenciaUsuario;
 import com.pryetsa.bibliotecav2.excepciones.NickIncorrectoException;
 import com.pryetsa.bibliotecav2.excepciones.PassIncorrectoException;

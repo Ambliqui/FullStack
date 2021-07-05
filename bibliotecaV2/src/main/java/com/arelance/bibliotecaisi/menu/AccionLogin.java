@@ -5,8 +5,8 @@
  */
 package com.arelance.bibliotecaisi.menu;
 
-import com.pryetsa.bibliotecav2.beans.DatosLogin;
-import com.pryetsa.bibliotecav2.vista.Vista;
+import com.arelance.bibliotecaisi.beans.DatosLogin;
+import com.arelance.bibliotecaisi.vista.Vista;
 
 
 /**

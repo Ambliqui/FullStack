@@ -3,37 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pryetsa.bibliotecav2.beans;
+package com.arelance.libreriafran.modelo;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
- * @author pryet
+ * @author frans
  */
-public final class Libro implements Serializable{
+public class Libro implements Serializable{
     private static final long serialVersionUID = 1L;
-    private final String titulo;
-    private final String ISBN;
+    private String titulo;
+    private String ISBN;
 
-    public Libro(String titulo,String ISBN) {
+    public Libro() {
+    }
+
+    public Libro(String titulo, String ISBN) {
         this.titulo = titulo;
         this.ISBN = ISBN;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getISBN() {
-        return ISBN;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 59 * hash + Objects.hashCode(this.ISBN);
+        hash = 67 * hash + Objects.hashCode(this.titulo);
+        hash = 67 * hash + Objects.hashCode(this.ISBN);
         return hash;
     }
 
@@ -49,16 +45,17 @@ public final class Libro implements Serializable{
             return false;
         }
         final Libro other = (Libro) obj;
-        if (!Objects.equals(this.ISBN, other.ISBN)) {
+        if (!Objects.equals(this.titulo, other.titulo)) {
             return false;
         }
-        return true;
+        return Objects.equals(this.ISBN, other.ISBN);
     }
-    
-    @Override
-    public String toString() {
-        return "\nLibro{" + "titulo=" + titulo + ", ISBN=" + ISBN + '}';
+
+    public String getTitulo() {
+        return titulo;
     }
-    
-    
+
+    public String getISBN() {
+        return ISBN;
+    }
 }

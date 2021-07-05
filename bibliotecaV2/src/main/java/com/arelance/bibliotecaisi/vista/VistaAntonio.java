@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pryetsa.bibliotecav2.vista;
+package com.arelance.bibliotecaisi.vista;
 
-import com.pryetsa.bibliotecav2.beans.DatosLogin;
-import com.pryetsa.bibliotecav2.beans.Libro;
-import com.pryetsa.bibliotecav2.beans.Sesion;
+import com.arelance.bibliotecaisi.beans.DatosLogin;
+import com.arelance.bibliotecaisi.beans.Libro;
+import com.arelance.bibliotecaisi.beans.Sesion;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
