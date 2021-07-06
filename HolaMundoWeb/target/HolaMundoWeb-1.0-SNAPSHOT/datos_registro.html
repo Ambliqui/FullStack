@@ -11,11 +11,15 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form name="formulario" action="HolaMundo" method="POST">
-            <label>Nombre: </label>
-            <input type="text" name="nombre"> 
-            <label>Password: </label>
-            <input type="password" name="password">
+        <form name="formulario" action="./Controller" method="GET">
+            <label>Nombre: </label><br>
+            <input type="text" name="nombre"><br> 
+            <label>Apellido: </label><br>
+            <input type="text" name="apellido"><br>
+            <label>Edad: </label><br>
+            <input type="number" name="edad"><br> 
+            <label>Password: </label><br>
+            <input type="password" name="password"><br>
             <input type="submit" value="Enviar">
         </form>
     </body>
