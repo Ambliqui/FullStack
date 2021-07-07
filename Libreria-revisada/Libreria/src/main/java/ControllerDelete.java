@@ -1,27 +1,26 @@
- /*
+
+
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import com.arelance.beans.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashSet;
 import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Mefisto
  */
-@WebServlet(urlPatterns = {"/Controller"})
-public class Controller extends HttpServlet {
+@WebServlet(urlPatterns = {"/ControllerDelete"})
+public class ControllerDelete extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,37 +33,26 @@ public class Controller extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String nombre = request.getParameter("nombre");
-        String apellido = request.getParameter("apellido");
-        String edad = request.getParameter("edad");
-        String accion = request.getParameter("accion");
-        
-        Set<Usuario> listado = (Set<Usuario>) request.getSession().getAttribute("listado");
-        
-        
-        
-//        if (accion.equals("alta")) {
-//            listado.add(new Usuario(nombre, apellido, edad));
-//            request.getSession().setAttribute("listado", listado);
-//            
-////            request.getServletContext().
-////                    getRequestDispatcher("/main_menu.jsp").
-////                    forward(request, response);
-//            
-//            response.sendRedirect("./main_menu.jsp");
-//            return;
-//        }
-//        
-//        if (accion.equals("baja")) {
-//            Usuario usuarioEliminado = new Usuario(nombre,apellido,edad);
-//            HttpSession session=request.getSession();
-//            session.setAttribute("usuarioEliminado", usuarioEliminado);
-//            
+        String opcion = request.getParameter("opcion");
+
+        if (opcion.equals("Si")) {
+            Set<Usuario> listado = (Set<Usuario>) request.getSession().getAttribute("listado");
+            listado.remove(request.getSession().getAttribute("usuarioEliminado"));
 //            request.getServletContext().
-//            getRequestDispatcher("/baja_confirmar.jsp").
-//            forward(request, response);
-//        }
+//                    getRequestDispatcher("/baja_correcta.jsp").
+//                    forward(request, response);
+
+            response.sendRedirect("./baja_correcta.jsp");
+            return;
+        }
+        
+        if (opcion.equals("No")) {
+//            request.getServletContext().
+//                    getRequestDispatcher("/main_menu.jsp").
+//                    forward(request, response);
+//            
+            response.sendRedirect("./main_menu.jsp");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

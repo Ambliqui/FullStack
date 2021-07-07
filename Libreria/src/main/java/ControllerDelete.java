@@ -38,14 +38,21 @@ public class ControllerDelete extends HttpServlet {
         if (opcion.equals("Si")) {
             Set<Usuario> listado = (Set<Usuario>) request.getSession().getAttribute("listado");
             listado.remove(request.getSession().getAttribute("usuarioEliminado"));
-            request.getServletContext().
-                    getRequestDispatcher("/baja_correcta.jsp").
-                    forward(request, response);
+//            request.getServletContext().
+//                    getRequestDispatcher("/baja_correcta.jsp").
+//                    forward(request, response);
+
+            response.sendRedirect("./baja_correcta.jsp");
+            request.getSession().removeAttribute("usuarioEliminado");
+            return;
         }
+
         if (opcion.equals("No")) {
-            request.getServletContext().
-                    getRequestDispatcher("/main_menu.jsp").
-                    forward(request, response);
+//            request.getServletContext().
+//                    getRequestDispatcher("/main_menu.jsp").
+//                    forward(request, response);
+//            
+            response.sendRedirect("./main_menu.jsp");
         }
     }
 

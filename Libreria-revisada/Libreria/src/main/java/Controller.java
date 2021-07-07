@@ -34,7 +34,6 @@ public class Controller extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String edad = request.getParameter("edad");
@@ -42,29 +41,27 @@ public class Controller extends HttpServlet {
         
         Set<Usuario> listado = (Set<Usuario>) request.getSession().getAttribute("listado");
         
-        
-        
-//        if (accion.equals("alta")) {
-//            listado.add(new Usuario(nombre, apellido, edad));
-//            request.getSession().setAttribute("listado", listado);
-//            
-////            request.getServletContext().
-////                    getRequestDispatcher("/main_menu.jsp").
-////                    forward(request, response);
-//            
-//            response.sendRedirect("./main_menu.jsp");
-//            return;
-//        }
-//        
-//        if (accion.equals("baja")) {
-//            Usuario usuarioEliminado = new Usuario(nombre,apellido,edad);
-//            HttpSession session=request.getSession();
-//            session.setAttribute("usuarioEliminado", usuarioEliminado);
-//            
+        if (accion.equals("alta")) {
+            listado.add(new Usuario(nombre, apellido, edad));
+            request.getSession().setAttribute("listado", listado);
+            
 //            request.getServletContext().
-//            getRequestDispatcher("/baja_confirmar.jsp").
-//            forward(request, response);
-//        }
+//                    getRequestDispatcher("/main_menu.jsp").
+//                    forward(request, response);
+            
+            response.sendRedirect("./main_menu.jsp");
+            return;
+        }
+        
+        if (accion.equals("baja")) {
+            Usuario usuarioEliminado = new Usuario(nombre,apellido,edad);
+            HttpSession session=request.getSession();
+            session.setAttribute("usuarioEliminado", usuarioEliminado);
+            
+            request.getServletContext().
+            getRequestDispatcher("/baja_confirmar.jsp").
+            forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

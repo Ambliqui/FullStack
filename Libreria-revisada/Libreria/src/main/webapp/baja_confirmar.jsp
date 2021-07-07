@@ -18,7 +18,6 @@
             out.println("Nombre: " + request.getParameter("nombre"));
             out.print("<br>Apellido: " + request.getParameter("apellido"));
             out.print("<br>Edad: " + request.getParameter("edad"));
-            request.setAttribute("currentUsuario", new Usuario(request.getParameter("nombre"),request.getParameter("apellido"),request.getParameter("edad")));
         %>
         <form name="formulario" action="ControllerDelete" method="GET">
             <input type="submit" name="opcion" value="Si">
