@@ -4,10 +4,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import com.arelance.beans.Libro;
 import com.arelance.beans.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,6 +43,7 @@ public class Controller extends HttpServlet {
         String accion = request.getParameter("accion");
 
         Set<Usuario> listado = (Set<Usuario>) request.getSession().getAttribute("listado");
+//        Map<Libro, Set<Usuario>> libreria = (Map<Libro, Set<Usuario>>) request.getSession().getAttribute("libreria");
 //        request.getSession().setAttribute("currentUser", new Usuario(nombre,apellido,edad));
 
         Usuario usuarioEliminado = new Usuario(nombre, apellido, edad);
